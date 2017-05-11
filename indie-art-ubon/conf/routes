@@ -1,0 +1,39 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /run                             controllers.ApplicationController.run
+GET         /                                controllers.ApplicationController.index
+GET         /signIn                          controllers.ApplicationController.signIn
+GET         /signUp                          controllers.ApplicationController.signUp
+GET         /signOut                         controllers.ApplicationController.signOut
+GET         /authenticate/:provider          controllers.SocialAuthController.authenticate(provider)
+POST        /authenticate/credentials        controllers.CredentialsAuthController.authenticate
+POST        /signUp                          controllers.SignUpController.signUp
+GET         /selectmodel                     controllers.IndieApplication.selectmodel
+GET         /selectModel                     controllers.IndieApplication.selectmodel
+#GET         /selectposts                     controllers.IndieApplication.selectposts
+
+GET         /pagelist                        controllers.ApplicationController.getlist
+GET         /showpost/:id                    controllers.IndieApplication.showpost(id : String)
+GET         /posts                           controllers.IndieApplication.posts
+GET         /model                           controllers.IndieApplication.model
+GET         /showmodel                       controllers.IndieApplication.showmodel
+GET         /col                             controllers.IndieApplication.collection
+GET         /profile/:id                     controllers.IndieApplication.profile(id : String)
+GET         /member                          controllers.IndieApplication.member
+GET         /forums                          controllers.IndieApplication.forums
+POST        /forum                           controllers.IndieApplication.forum
+POST        /comment                         controllers.IndieApplication.comment
+GET         /upmodel                         controllers.IndieApplication.upmodel
+GET         /user/:id                        controllers.IndieApplication.userP(id : String)
+POST        /upload                          controllers.IndieApplication.upload
+
+#GET         /test                            controllers.IndieApplication.b4wmodel
+#GET         /test                            controllers.IndieApplication.three
+GET         /test                            controllers.IndieApplication.threejs2
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                    controllers.Assets.at(path="/public", file)
+GET         /webjars/*file                   controllers.WebJarAssets.at(file)

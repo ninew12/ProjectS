@@ -1,0 +1,12 @@
+@(user: models.User,dbforuminfo : Seq[models.Foruminfo])(implicit messages: Messages)
+
+@main(Messages("home.title"), Some(user)) {
+
+    @modelsUser(user)
+
+    @postsUser(user,dbforuminfo)
+
+
+    <br><br><br> <!--footer -->
+       @footer()
+}

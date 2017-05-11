@@ -1,0 +1,71 @@
+@import forms._
+@(user: models.User,uploadForm: Form[forms.uploadForm.Data])(implicit request: RequestHeader , messages: Messages)
+
+<!DOCTYPE html>
+@import b3.inline.fieldConstructor
+@blend = @{ Seq("C"->"Category","C"->"Character","A"->"Assets","S"->"Scene","O"->"Others") }
+@main(Messages("home.title"), Some(user)){
+  <div class="container">
+         <br><br><br>
+            <div class="mt mb ">
+               <h3><i class="fa fa-upload" aria-hidden="true"></i> UPLOAD MODEL</h3>
+           </div>
+             <div class="panel panel-info">
+                <div class="panel-body">
+                  <div class="container">
+                    <div class="row">
+                     <div class="col-sm-1  ">
+                     </div>
+                      <div class="col-sm-8  ">
+
+                        @helper.form(action = routes.IndieApplication.upload,'enctype -> "multipart/form-data") {
+                          @helper.CSRF.formField
+
+                            @b3.text( uploadForm("title"), '_label -> "Topic" )
+                            @b3.textarea( uploadForm("detail"), '_label -> "details" ,'rows -> 3 )
+                            @b3.select( uploadForm("modelType"), options = blend, '_label -> "Select" )
+                            @b3.file( uploadForm("picture"), '_label -> "Picturefile" )
+                            @b3.file( uploadForm("picture"), '_label -> "Blendfile" )
+                            @b3.file( uploadForm("picture"), '_label -> "Jsonfile" )
+                            @b3.file( uploadForm("picture"), '_label -> "Htmlfile" )
+
+                            <div class=" text-right">
+                               <button type="submit" class="btn btn-primary">Submit</button> &nbsp; &nbsp;
+                               <button type="submit" class="btn btn-danger">Cancel</button>
+                             </div>
+
+                          }
+
+                            </div>   <!-- col-md-8 -->
+                         </div>   <!-- row -->
+                      </div><!-- container -->
+                   </div><!-- panal-body -->
+                 </div><!-- panal -->
+              </div><!--inner-->
+
+
+           <!--dialog -->
+                     <div class="modal" id="model" role="dialog">
+           	                <div class="modal-dialog">
+                                <div class="modal-content">
+                                      <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                                             <h4 class="modal-title">เงื่อนไขการอัพโหลดผลงาน</h4>
+                                       </div>
+                               <div class="modal-body">
+                                 <!-- <div class="well">
+                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;ผลงานที่ทำการอัพโหลดเป็นผลงานที่ถูกพัฒนาขึ้นด้วยสมาชิกเอง</p>
+                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;หากมีการคัดลอกผลงานเพื่อนำมาอัพโหลดทางเราจะไม่รับผิดชอบใดๆทั้งสิ้น</p>
+                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;ผู้พัฒนาต้องการแชร์ผลงานให้สมาชิกท่านอื่นโดยไม่มีเงื่อนไขหรือเสียค่าใช้จ่ายใดๆทั้งสิ้น</p>
+                                </div> -->
+                              </div>
+                                  <div class="modal-footer">
+                                             <a href="#" data-dismiss="modal" class="btn">Close</a>
+                                             <a href="#" class="btn btn-warning">Ok</a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>  <!--dialog -->
+
+          @footer()
+}

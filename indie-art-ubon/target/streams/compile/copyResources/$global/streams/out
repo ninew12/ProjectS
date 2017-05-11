@@ -1,0 +1,10 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\application.conf,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\application.prod.conf,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\application.prod.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\evolutions,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\messages,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\messages)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\messages.th,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\messages.th)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\routes,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\silhouette.conf,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\silhouette.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\evolutions\default,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\conf\evolutions\default\1.sql,C:\Users\newk12\Documents\ProjectS\seniorprojects\indie-art-ubon\target\scala-2.11\classes\evolutions\default\1.sql)[0m
